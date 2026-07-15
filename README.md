@@ -23,4 +23,4 @@ The repository contains a validated Codex v2 pet package:
 - `spritesheet.webp` — the final `1536 × 2288` animated atlas using `192 × 208` cells
 - `preview.gif` — the hover-to-idle animation at the atlas's native cell ratio
 
-Thetaki is an independent community-created character, not an official OpenAI pet.
+Thetaki is an independent community-created character.
