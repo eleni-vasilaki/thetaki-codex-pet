@@ -2,47 +2,55 @@
 
 Thetaki is an animated custom pet for Codex Desktop: a tiny olive-green scholar with bright curious eyes, a beloved blue book, and warm academic charm.
 
-![Thetaki dancing and reading](preview.gif)
+| Left-side Thetaki | Right-side Thetaki |
+| --- | --- |
+| ![Thetaki facing inward from the left](previews/left-side-idle.gif) | ![Thetaki facing inward from the right](previews/right-side-idle.gif) |
 
-## Choose a version
+## Choose the placement
 
-### Thetaki Version 2 — focused reading (recommended)
+### Left-side Thetaki
 
-During active work, Thetaki keeps the book open and reads across it: left, centre, right. The body and book remain steady, and there is no blink. This makes the brief working animation feel concentrated and purposeful before Thetaki returns to the gentler idle loop.
+Use this package when Thetaki sits on the left side of the window. The idle sequence faces screen-right, inward toward the workspace.
 
-The repository root contains this version. It is also preserved in `versions/thetaki-version-2/`.
+The repository root contains this package.
 
-### Thetaki Version 1 — original
+### Right-side Thetaki
 
-The original working animation brings the book in, opens it, blinks, and closes it. It is more energetic, but the repeated book movement can feel hurried. It is preserved in `versions/thetaki-version-1/`.
+Use this package when Thetaki sits on the right side of the window. Its idle sequence faces screen-left, inward toward the workspace.
+
+The right-side package mirrors the six idle animation frames and the neutral idle pose without reversing their timing. Every other animation—including focused reading, hover, movement, reactions, and directional gaze—remains identical to Left-side Thetaki.
+
+It is stored in `right-side/`.
+
+These are two placement variants of the same design, not numbered releases.
 
 ## Install
 
-Clone or download this repository. To install the recommended Thetaki Version 2:
+Clone or download this repository.
+
+To install Left-side Thetaki:
 
 ```bash
 mkdir -p "$HOME/.codex/pets/thetaki"
 cp pet.json spritesheet.webp "$HOME/.codex/pets/thetaki/"
 ```
 
-To install Thetaki Version 1 instead:
+To install Right-side Thetaki:
 
 ```bash
-mkdir -p "$HOME/.codex/pets/thetaki"
-cp versions/thetaki-version-1/pet.json "$HOME/.codex/pets/thetaki/pet.json"
-cp versions/thetaki-version-1/spritesheet.webp "$HOME/.codex/pets/thetaki/spritesheet.webp"
+mkdir -p "$HOME/.codex/pets/thetaki-right"
+cp right-side/pet.json right-side/spritesheet.webp "$HOME/.codex/pets/thetaki-right/"
 ```
 
-Open Codex Desktop and select Thetaki from the pets menu.
+The packages have distinct identifiers, so both may be installed together and selected separately from the pets menu.
 
 ## Package
 
-Each version is a validated Codex v2 pet package:
+Each placement variant is a validated Codex v2 pet package containing:
 
 - `pet.json` — Thetaki's package manifest
-- `spritesheet.webp` — the final `1536 × 2288` animated atlas using `192 × 208` cells
-- `preview.gif` — the hover-to-idle animation at the atlas's native cell ratio
+- `spritesheet.webp` — the `1536 × 2288` animated atlas using `192 × 208` cells
 
-The design names “Thetaki Version 1” and “Thetaki Version 2” are independent of `spriteVersionNumber: 2`, which identifies the Codex 8×11 atlas format and must remain unchanged.
+`spriteVersionNumber: 2` identifies the Codex 8×11 atlas format; it is not a Thetaki release number.
 
 Thetaki is an independent community-created character.
